@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    TV Titulo   -->
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media no Semestre."
+        android:textColor="#00BCD4"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="30dp" />
+
+
+    <!--    TV e ET Nome      -->
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Nome:"
+        android:textColor="#00BCD4"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_nota1"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+
+        android:id="@+id/et_nome"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Digite o seu nome..."
+        android:inputType="text"
+        android:maxLength="50"
+        app:layout_constraintBottom_toTopOf="@+id/et_nota1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_nome"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+
+        />
+
+
+    <!--    TV e ET Nota1      -->
+
+    <TextView
+        android:id="@+id/tv_nota1"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Nota 1:"
+        android:textColor="#00BCD4"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_nota2"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/et_nota1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        app:layout_constraintBottom_toTopOf="@+id/et_nota2"
+        app:layout_constraintLeft_toRightOf="@+id/tv_nota1"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+
+        />
+
+
+    <!--    TV e ET Nota2      -->
+
+    <TextView
+        android:id="@+id/tv_nota2"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Nota 2:"
+        android:textColor="#00BCD4"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_calc_media"
+        app:layout_constraintTop_toBottomOf="@id/et_nota1"
+        tools:layout_editor_absoluteX="20dp" />
+
+
+    <EditText
+        android:id="@+id/et_nota2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        app:layout_constraintLeft_toRightOf="@+id/tv_nota2"
+        app:layout_constraintTop_toBottomOf="@id/et_nota1"
+        />
+
+
+    <!--    BT calcula media      -->
+
+    <Button
+        android:id="@+id/bt_calc_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="calcularMedia"
+        android:text="Calcular Média"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nota2"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="-------------"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_calc_media" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
